@@ -2,7 +2,7 @@
 
 ### Installation EN
 
-To `build` AliveScript documentation:
+To `build` AliveScript's documentation:
 
 1. Download `mdbook` here: [MdBook Releases](https://github.com/rust-lang/mdBook/releases)
 2. Add `mdbook` to your PATH environment variable
