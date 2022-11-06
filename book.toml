@@ -1,0 +1,6 @@
+[book]
+authors = ["Mathis Laroche"]
+language = "fr"
+multilingual = true
+src = "src"
+title = "AliveScript Documentation"

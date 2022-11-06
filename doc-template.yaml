@@ -1,0 +1,56 @@
+- Introduction: intro.md
+- Premiers Pas:
+    - first-steps.md
+    - Creer son premier défi: first-challenge.md # création d'un défi Alive
+    - Bouger la voiture: move-the-car.md # explique le flow d'un programme en utilisant les fonctions de mouvements
+    - Bonjour, Monde!: hello-world.md # explique la fonction `afficher`
+
+- Concepts de base:
+    - basics.md
+    - Les types de données:
+        - datatypes.md
+        - Les types primitifs: primitive-datatype.md
+        - Les itérables: iterable-datatype.md
+    - Les variables et les constantes: variables.md
+    - Les commentaires: comments.md
+    - Entrées et sorties (IO):
+        - io.md
+        - Afficher: print.md
+        - Lire: read.md
+    - Les opérateurs:
+        - operators.md
+        - Les opérateurs binaires:
+            - binary-op.md
+            - Les opérateurs arithmétiques: arithmetic-op.md
+            - Les opérateurs de comparaison: comp-op.md
+        - Les opérateurs logiques: logical-op.md
+
+- Les structures de contrôle:
+    - control-flow.md
+    - Les structures conditionnelles: if-else.md
+    - Les boucles:
+        - loops.md
+        - La boucle repeter: repeat-loop.md
+        - La boucle `tant que` et `faire tant que`: while-loop.md
+        - La boucle pour: for-loop.md
+
+- Concepts avancés:
+    - Les fonctions: functions.md
+    - Les structures: structures.md
+    - Les getter et les setter: getter-setter.md
+
+# création, pas à pas, d'un jeu où il faut trouver un nombre choisi au hasard
+- Programmer un jeu de devinettes: guessing-game.md
+
+- Les modules:
+    - modules.md
+    - Module Builtins: module-builtins.md
+    - Module Voiture: module-voiture.md
+    - Module Ai: module-ai.md
+    - Module Aliot: module-aliot.md
+
+- Annexe:
+    - appendix.md
+    - Mots clés: keywords.md
+    - Opérateurs: all-op.md
+    - Le développement et le futur d'AliveScript: alivescript-dev.md
