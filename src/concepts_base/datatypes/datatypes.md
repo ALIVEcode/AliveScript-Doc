@@ -27,8 +27,8 @@ On appelle **type primitif** les types suivants:
 
 On appelle **type de collection** les types suivants:
 
-* Le type [`liste`]
-* Le type [`dict`]
+* Le type [`liste`](./collections.md#le-type-liste)
+* Le type [`dict`](./collections.md#le-type-dict)
 
 ## Les types particuliers
 
@@ -36,9 +36,9 @@ On appelle **type de collection** les types suivants:
 
 Le type `iterable` est un type qui englobe les types suivants:
 
-* Le type `texte`
-* Le type `liste`
-* Le type `dict`
+* Le type [`texte`](./types_primitifs.md#le-type-texte)
+* Le type [`liste`](./collections.md#le-type-liste)
+* Le type [`dict`](./collections.md#le-type-dict)
 
 Si un type est `iterable`, cela signifie qu'il possède certaines opérations particulières (voir les opérations sur
 les `iterables` dans le [_chapitre 2.5.3_](../operateurs/iterables.md))
@@ -57,7 +57,7 @@ En pratique, c'est un synonyme du type `nulType`
 
 ---
 
-> Afin de savoir de quel type est une certaine valeur, il suffit d'utiliser la fonction `typeDe`.
+> Afin de savoir de quel type est une certaine valeur, il suffit d'utiliser la fonction builtin `typeDe`.
 > Ex:
 > ```
 > afficher typeDe(12)  # entier
