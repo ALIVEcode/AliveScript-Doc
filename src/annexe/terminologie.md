@@ -17,6 +17,29 @@ lorsque exécutées. Par exemple, un programme peut afficher `Bonjour, Monde!` d
 sur la Lune! Le terme _programme_ est très large. Ici, il fera référence aux morceaux de code que vous serez invités à
 lire tout au long de ce livre.
 
+### Un énoncé (ou statement en anglais)
+
+Un énoncé est le nom donné à l'action principal réalisé par une _ligne de code_ (un énoncé peut s'étendre sur plusieurs
+lignes, mais cela est rarement le cas). Il ne peut y avoir qu'**un seul énoncé par ligne de code**, mais un énoncé peut
+inclure. Contrairement à une expression, un énoncé ne produit aucune valeur après avoir été exécuté.
+
+Ex:
+
+* `lire var monNom` -> ici, l'énoncé est _`lire`_ ayant comme action la déclaration puis la lecture d'une valeur dans
+  `nomNom`.
+* `var a = 12 + 3` -> ici, l'énoncé est _`déclarer`_ ayant comme action la déclaration de la variable `a` avec la valeur
+  donnée par le résultat de l'expression `12 + 3`.
+
+### Une expression
+
+Une expression est une sous-action qui, une fois évaluée (ou réduite), produit une valeur. Le nombre
+maximum d'expressions dépend de l'énoncé dans lequel se retrouve l'expression.
+
+Ex:
+
+* `var a = 12 + 3` -> ici, l'expression est _`additionner`_ ayant comme sous-action `12 + 3` et comme valeur
+  résultante, après avoir été évaluée, `15`
+
 ### Les blocs de code
 
 Un **bloc de code** est un morceau de code encadré par un énoncé d'ouverture et un énoncé de fermeture.
@@ -51,3 +74,12 @@ afficher "Nous sommes revenu dans le bloc principal"
 ### Bloc de code *principal*
 
 Nom donné au bloc de code qui englobe tout le programme.
+
+### Une entrée
+
+Entrée: Une _entrée_ (ou _input_ en anglais) est une valeur qui répond aux critères suivants:
+
+1. Elle n'est pas connue du programme avant l'exécution.
+2. Elle provient d'une interaction entre une source extérieure et le programme.
+
+### Une sortie
