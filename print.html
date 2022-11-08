@@ -1,0 +1,430 @@
+<!DOCTYPE HTML>
+<html lang="fr" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>AliveScript Documentation</title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Introduction</a></li><li class="chapter-item expanded "><a href="premier_pas/premier_pas.html"><strong aria-hidden="true">1.</strong> Premiers pas</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="premier_pas/premier_defi.html"><strong aria-hidden="true">1.1.</strong> Créer son premier défi</a></li><li class="chapter-item expanded "><a href="premier_pas/bonjour_monde.html"><strong aria-hidden="true">1.2.</strong> Bonjour, Monde!</a></li><li class="chapter-item expanded "><a href="premier_pas/bouger_la_voiture.html"><strong aria-hidden="true">1.3.</strong> Bouger la voiture</a></li></ol></li><li class="chapter-item expanded "><a href="concepts_base/concepts_base.html"><strong aria-hidden="true">2.</strong> Concepts de base</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts_base/commentaires.html"><strong aria-hidden="true">2.1.</strong> Les commentaires</a></li><li class="chapter-item expanded "><a href="concepts_base/datatypes/datatypes.html"><strong aria-hidden="true">2.2.</strong> Les types de données</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts_base/datatypes/types_primitifs.html"><strong aria-hidden="true">2.2.1.</strong> Les types primitifs</a></li><li class="chapter-item expanded "><a href="concepts_base/datatypes/collections.html"><strong aria-hidden="true">2.2.2.</strong> Les collections</a></li><li class="chapter-item expanded "><a href="concepts_base/datatypes/operations.html"><strong aria-hidden="true">2.2.3.</strong> Opérations sur les types</a></li></ol></li><li class="chapter-item expanded "><a href="concepts_base/io.html"><strong aria-hidden="true">2.3.</strong> Les entrées et sorties (IO)</a></li><li class="chapter-item expanded "><a href="concepts_base/variables.html"><strong aria-hidden="true">2.4.</strong> Les variables et les constantes</a></li><li class="chapter-item expanded "><a href="concepts_base/operateurs/operateurs.html"><strong aria-hidden="true">2.5.</strong> Les opérateurs</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts_base/operateurs/binaires.html"><strong aria-hidden="true">2.5.1.</strong> Les opérateurs binaires</a></li><li class="chapter-item expanded "><a href="concepts_base/operateurs/logiques.html"><strong aria-hidden="true">2.5.2.</strong> Les opérateurs logiques</a></li><li class="chapter-item expanded "><a href="concepts_base/operateurs/iterables.html"><strong aria-hidden="true">2.5.3.</strong> Les opérateurs sur les itérables</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="structure_controle/structure_controle.html"><strong aria-hidden="true">3.</strong> Les structures de contrôle</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="structure_controle/if_else.html"><strong aria-hidden="true">3.1.</strong> Les structures conditionnelles</a></li><li class="chapter-item expanded "><a href="structure_controle/loops.html"><strong aria-hidden="true">3.2.</strong> Les boucles</a></li></ol></li><li class="chapter-item expanded "><a href="fonctions/fonctions.html"><strong aria-hidden="true">4.</strong> Les fonctions</a></li><li class="chapter-item expanded "><a href="structures/structures.html"><strong aria-hidden="true">5.</strong> Les structures</a></li><li class="chapter-item expanded "><a href="modules/modules.html"><strong aria-hidden="true">6.</strong> Les modules</a></li><li class="chapter-item expanded "><a href="guessing_game/guessing_game.html"><strong aria-hidden="true">7.</strong> Programmer un jeu de devinettes</a></li><li class="chapter-item expanded "><a href="concepts_avances/concepts_avances.html"><strong aria-hidden="true">8.</strong> Concepts avancés</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts_avances/getter_setter.html"><strong aria-hidden="true">8.1.</strong> Les getter et les setter</a></li></ol></li><li class="chapter-item expanded "><a href="annexe/annexe.html"><strong aria-hidden="true">9.</strong> Annexe</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="annexe/mots_clefs.html"><strong aria-hidden="true">9.1.</strong> Annexe A: Mots clefs</a></li><li class="chapter-item expanded "><a href="annexe/tableau_datatypes.html"><strong aria-hidden="true">9.2.</strong> Annexe B: Tableau des types de données</a></li><li class="chapter-item expanded "><a href="annexe/liste_modules.html"><strong aria-hidden="true">9.3.</strong> Annexe C: Listes des modules</a></li><li class="chapter-item expanded "><a href="annexe/futur.html"><strong aria-hidden="true">9.4.</strong> Annexe D: Le futur d'AliveScript</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">AliveScript Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<h2 id="lire-du-code-alivescript"><a class="header" href="#lire-du-code-alivescript">Lire du code AliveScript</a></h2>
+<p>Un programme écrit en AliveScript se lit, comme la plupart des langages de
+programmation, de gauche à droite et de haut en bas.</p>
+<h2 id="quest-ce-quun-programme-au-juste"><a class="header" href="#quest-ce-quun-programme-au-juste">Qu'est-ce qu'un programme au juste?</a></h2>
+<p>À compléter...</p>
+<h2 id="les-mots-clefs"><a class="header" href="#les-mots-clefs">Les mots clefs</a></h2>
+<p>AliveScript possède un ensemble de mots réservés (appelés <em>mots clefs</em>) qui ne
+peuvent pas être utilisés en dehors du contexte dans lequel ils sont définis.
+La liste des <em>mots clefs</em> d'AliveScript se trouve à l'<a href="annexe/mots_clefs.html">Annexe A</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chapitre-1-bonjour-monde"><a class="header" href="#chapitre-1-bonjour-monde">Chapitre 1: Bonjour monde!</a></h1>
+<h2 id="Écrire-son-premier-programme-en-alivescript"><a class="header" href="#Écrire-son-premier-programme-en-alivescript">Écrire son premier programme en AliveScript!</a></h2>
+<p>Dans un</p>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="bonjour-monde"><a class="header" href="#bonjour-monde">Bonjour, Monde!</a></h1>
+<h2 id="Écrire-son-premier-programme-en-alivescript-1"><a class="header" href="#Écrire-son-premier-programme-en-alivescript-1">Écrire son premier programme en AliveScript</a></h2>
+<p>Le programme le plus simple à faire en AliveScript permet d'afficher <code>Bonjour, Monde!</code>
+dans la console.</p>
+<p>Pour ce faire, on écrit:</p>
+<pre><code>afficher &quot;Bonjour, Monde!&quot;
+</code></pre>
+<p>Puis on exécute le programme en appuyant sur le</p>
+<p><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="play-circle" class="svg-inline--fa fa-play-circle fa-w-16 fa-fw fa-2x button-fa-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm115.7 272l-176 101c-15.8 8.8-35.7-2.5-35.7-21V152c0-18.4 19.8-29.8 35.7-21l176 107c16.4 9.2 16.4 32.9 0 42z"></path></svg>
+<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm115.7 272l-176 101c-15.8 8.8-35.7-2.5-35.7-21V152c0-18.4 19.8-29.8 35.7-21l176 107c16.4 9.2 16.4 32.9 0 42z"></path>
+</svg></p>
+<p>La console devrait alors afficher</p>
+<pre><code>Bonjour, Monde!
+[exécution terminée]
+</code></pre>
+<p>Si c'est le cas, félicitation, vous pouvez maintenant ajouter programmeur d'AliveScript à votre C.V.!</p>
+<h2 id="décortiquer-le-programme"><a class="header" href="#décortiquer-le-programme">Décortiquer le programme</a></h2>
+<p>Malgré l'apparente simplicité de ce qu'on vient de faire, un tel programme ne pourrait pas être
+possible sans l'interaction de multiples systèmes.</p>
+<p>La première partie (<code>afficher</code>) est une <strong>fonction</strong> que nous appelons en lui passant un <strong>argument</strong>
+(<code>&quot;Bonjour, Monde!&quot;</code>). La fonction <code>afficher</code> imprime <strong>l'argument</strong> sur la console. Si les termes
+<strong>fonction</strong>, <strong>appeler</strong> et <strong>argument</strong> ne vous sont pas familiers, pas de panique, nous
+y reviendrons dans le <em>chapitre 4</em>.</p>
+<p>La deuxième partie (<code>&quot;Bonjour, Monde!&quot;</code>) est une donnée de type <strong>texte</strong> qui représente la phrase
+<strong>Bonjour, Monde!</strong>. Afin que cette phrase soit considérée de type <strong>texte</strong> par AliveScript, nous
+l'avons mise entre doubles guillemets <code>&quot;</code>. Nous verrons le type <strong>texte</strong> plus en détails ainsi que les
+différents types de données dans le <em>chapitre 2.2</em>.</p>
+<h2 id="cest-quoi-appeler-une-fonction"><a class="header" href="#cest-quoi-appeler-une-fonction">C'est quoi <em>appeler une fonction</em>?</a></h2>
+<p>Non, nous n'avons pas besoin de son numéro de téléphone pour l'appeler, ce terme a une signification
+particulière en programmation.</p>
+<p>Appeler une fonction, c'est de lui demander d'exécuter une série d'opérations prédéfinies par la fonction en
+utilisant les différentes valeurs que nous lui fournissons (ces valeurs sont appelées <strong>arguments</strong>). Dans le cas de la
+fonction <code>afficher</code>, elle imprime dans la console l'argument qui lui est passé lorsque nous l'appelons.</p>
+<p>Nous reviendrons sur la subtilité de l'appel de fonction, ainsi que sur les autres aspects des fonctions,
+plus en détails dans le <em>chapitre 4</em>.</p>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="les-concepts-de-base"><a class="header" href="#les-concepts-de-base">Les concepts de base</a></h1>
+<p>Dans ce chapitre, nous allons explorer les différents concepts qu'il faut maitriser afin 
+d'utiliser la base d'AliveScript.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="les-commentaires"><a class="header" href="#les-commentaires">Les commentaires</a></h1>
+<p>Les commentaires se présentent sous plusieurs formes, mais ils ont tous un point en commun: ils permettent d'annoter le
+code
+sans impacter son fonctionnement.</p>
+<p>Les commentaires sont en effet <strong>ignorés</strong> lors de l'exécution.</p>
+<!-- (sauf dans un cas particulier que nous verrons plus tard) par AliveScript -->
+<h2 id="les-commentaires-simple-ligne"><a class="header" href="#les-commentaires-simple-ligne">Les commentaires <strong>simple ligne</strong>:</a></h2>
+<p>Syntaxe: <code># commentaire</code></p>
+<p>Utilité: Ce type de commentaire est utile lorsque l'information tient sur <em>une seule</em> ligne. Ils peuvent être situés à
+la fin d'une ligne tout comme au début d'une ligne.</p>
+<p>Ex:</p>
+<pre><code>afficher &quot;Bonjour!&quot;  # ce code affiche Bonjour!
+
+# ce code va afficher Bonjour!
+afficher &quot;Bonjour!&quot;
+</code></pre>
+<h2 id="les-commentaires-multilignes"><a class="header" href="#les-commentaires-multilignes">Les commentaires <strong>multilignes</strong>:</a></h2>
+<p>Syntaxe:</p>
+<ul>
+<li>ouverture: <code>(:</code></li>
+<li>fermeture: <code>:)</code></li>
+</ul>
+<p>Utilité: Ce type de commentaire est utile lorsque l'information s'étend sur <em>plusieurs</em> lignes. Même s'ils peuvent être
+situés aux mêmes endroits que les commentaires simple ligne, il est recommandé de les séparer des lignes de code.</p>
+<p>Ex:</p>
+<pre><code>(:  
+ salut je suis un commentaire  
+ sur plusieurs  
+ lignes  
+ et la prochaine ligne
+ va afficher
+ Bonjour!
+:)
+afficher &quot;Bonjour!&quot;
+</code></pre>
+<h2 id="les-commentaires-de-documentation"><a class="header" href="#les-commentaires-de-documentation">Les commentaires de <strong>documentation</strong>:</a></h2>
+<p>Syntaxe:</p>
+<ul>
+<li>ouverture: <code>(-:</code></li>
+<li>fermeture: <code>:-)</code></li>
+</ul>
+<p>Utilité: Ce type de commentaire est utilisé au-dessus de <strong>fonctions</strong> (voir <em>chapitre 4</em>) et de <strong>structures</strong> (voir
+<em>chapitre</em> 5) afin de spécifier à quoi elles servent. Par convention, chaque ligne d'un commentaire de documentation
+commence par un espace suivi par un <code>-</code> (de manière à les aligner avec la syntaxe d'ouverture et de fermeture).</p>
+<p>Ex:</p>
+<pre><code>(-:
+ - Cette fonction additionne deux nombres et retourne le résultat
+ - @param num1: le premier nombre
+ - @param num2: le deuxième nombre
+ - @retourne la somme deux deux nombres
+:-)
+fonction additionner(num1: nombre, num2: nombre) -&gt; nombre
+    retourner num1 + num2
+fin fonction
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="les-types-de-données"><a class="header" href="#les-types-de-données">Les types de données</a></h1>
+<p>Chaque valeur présente dans AliveScript est d’un certain type de donnée. Ces types ont une double utilité. Dans un
+premier temps, les types permettent de facilement classifier les valeurs en catégories, rendant la manipulation de
+données plus intuitive. Dans un deuxième temps, ils permettent à AliveScript de s’assurer que certaines opérations sont
+valides avant même qu’elles ne soient exécutées.</p>
+<blockquote>
+<p>Pour voir tous les types de données de manière synthétisée, voir le tableau des types de données dans
+l'<a href="concepts_base/datatypes/../../annexe/tableau_datatypes.html">Annexe B</a></p>
+</blockquote>
+<h3 id="les-types-primitifs"><a class="header" href="#les-types-primitifs">Les types primitifs</a></h3>
+<p>On appelle <strong>type primitif</strong> les types suivants:</p>
+<ul>
+<li>Les <a href="concepts_base/datatypes/./types_primitifs.html#les-types-numriques">types numériques</a>
+<ul>
+<li>Le type <a href="concepts_base/datatypes/./types_primitifs.html#le-type-entier"><code>entier</code></a></li>
+<li>Le type <a href="concepts_base/datatypes/./types_primitifs.html#le-type-decimal"><code>decimal</code></a></li>
+<li>Le type <a href="concepts_base/datatypes/./types_primitifs.html#le-type-nombre"><code>nombre</code></a></li>
+</ul>
+</li>
+<li>Le type <a href="concepts_base/datatypes/./types_primitifs.html#le-type-texte"><code>texte</code></a></li>
+<li>Le type <a href="concepts_base/datatypes/./types_primitifs.html#le-type-booleen"><code>booleen</code></a></li>
+<li>Le type <a href="concepts_base/datatypes/./types_primitifs.html#le-type-nultype"><code>nulType</code></a></li>
+<li>Le type <a href="concepts_base/datatypes/./types_primitifs.html#le-type-paire"><code>paire</code></a></li>
+<li>Le type <a href="concepts_base/datatypes/./types_primitifs.html#le-type-fonctiontype"><code>fonctionType</code></a></li>
+<li>Le type <a href="concepts_base/datatypes/./types_primitifs.html#le-type-structuretype"><code>structureType</code></a></li>
+</ul>
+<h3 id="les-types-de-collections"><a class="header" href="#les-types-de-collections">Les types de collections</a></h3>
+<p>On appelle <strong>type de collection</strong> les types suivants:</p>
+<ul>
+<li>Le type [<code>liste</code>]</li>
+<li>Le type [<code>dict</code>]</li>
+</ul>
+<h2 id="les-types-particuliers"><a class="header" href="#les-types-particuliers">Les types particuliers</a></h2>
+<h3 id="le-type-iterable"><a class="header" href="#le-type-iterable">Le type <code>iterable</code></a></h3>
+<p>Le type <code>iterable</code> est un type qui englobe les types suivants:</p>
+<ul>
+<li>Le type <code>texte</code></li>
+<li>Le type <code>liste</code></li>
+<li>Le type <code>dict</code></li>
+</ul>
+<p>Si un type est <code>iterable</code>, cela signifie qu'il possède certaines opérations particulières (voir les opérations sur
+les <code>iterables</code> dans le <a href="concepts_base/datatypes/../operateurs/iterables.html"><em>chapitre 2.5.3</em></a>)</p>
+<h3 id="le-type-tout"><a class="header" href="#le-type-tout">Le type <code>tout</code></a></h3>
+<p>Le type <code>tout</code> est un type particulier qui englobe tous les autres types.</p>
+<h3 id="le-type-rien"><a class="header" href="#le-type-rien">Le type <code>rien</code></a></h3>
+<p>Le type <code>rien</code> est utile comme type de <strong>retour de fonction</strong> afin de spécifier que la fonction ne retourne aucune
+valeur (voir les fonctions au <a href="concepts_base/datatypes/../../fonctions/fonctions.html"><em>chapitre 4</em></a>).</p>
+<p>En pratique, c'est un synonyme du type <code>nulType</code></p>
+<hr />
+<blockquote>
+<p>Afin de savoir de quel type est une certaine valeur, il suffit d'utiliser la fonction <code>typeDe</code>.
+Ex:</p>
+<pre><code>afficher typeDe(12)  # entier
+afficher typeDe(-420.69)  # decimal
+afficher typeDe(afficher)  # fonctionType
+</code></pre>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="les-types-primitifs-1"><a class="header" href="#les-types-primitifs-1">Les types primitifs</a></h1>
+<h2 id="les-types-numériques"><a class="header" href="#les-types-numériques">Les types numériques</a></h2>
+<p>AliveScript supporte 2 types numériques (<code>entier</code> et <code>decimal</code>) ainsi qu'un type englobant les deux (<code>nombre</code>).</p>
+<h3 id="le-type-entier"><a class="header" href="#le-type-entier">Le type <code>entier</code></a></h3>
+<p>On écrit le nombre entier littéralement.
+<em>On peut mettre un <code>-</code> devant pour le rendre négatif</em>.</p>
+<p>Ex:</p>
+<pre><code>42069
+1290
+-1232
+-123456
+</code></pre>
+<h3 id="le-type-decimal"><a class="header" href="#le-type-decimal">Le type <code>decimal</code></a></h3>
+<p>Il existe 3 façons d'écrire un nombre décimal:</p>
+<ol>
+<li>On écrit un <code>.</code> entre deux nombres entiers.</li>
+<li>On écrit un <code>.</code> devant un nombre entier (signifie <code>0.</code>).</li>
+<li>On écrit un nombre entier suivi d'un <code>.</code> (signifie <code>.0</code>).</li>
+</ol>
+<p><em>On peut mettre un <code>-</code> devant pour le rendre négatif</em>.</p>
+<p>Ex:</p>
+<pre><code>0.123
+.1425
+9192.
+-0.1234
+</code></pre>
+<h3 id="le-type-nombre"><a class="header" href="#le-type-nombre">Le type <code>nombre</code></a></h3>
+<p>Le type <code>nombre</code> englobe les types <code>entier</code> et <code>decimal</code>, c'est-à-dire qu'une valeur de type <code>nombre</code> est soit
+un <code>entier</code>
+, soit un <code>decimal</code>.</p>
+<p>Autrement dit, le type <code>nombre</code> est synonyme de <code>entier | decimal</code> (voir les opérations sur les types <a href="concepts_base/datatypes/./operations.html"><em>chapitre
+2.2.3</em></a>)</p>
+<h2 id="le-type-texte"><a class="header" href="#le-type-texte">Le type <code>texte</code></a></h2>
+<p>On met des doubles guillemets (<code>&quot;</code>) ou des simples guillemets (<code>'</code>) de part et d'autre du texte.</p>
+<p><em>Le symbole choisit doit être le même au début et à la fin du texte.</em></p>
+<p>Ex:</p>
+<pre><code>&quot;abc&quot; ✅ 
+'def' ✅  
+&quot;je vous dit bonjour si je le veux!&quot; ✅ 
+&quot;ce n'est pas valide' ❌ 
+</code></pre>
+<h2 id="le-type-booleen"><a class="header" href="#le-type-booleen">Le type <code>booleen</code></a></h2>
+<p>Type représentant le concept de vérité. Les booléens sont définis par les mots clefs <code>vrai</code> et <code>faux</code>.</p>
+<h2 id="le-type-nultype"><a class="header" href="#le-type-nultype">Le type <code>nulType</code></a></h2>
+<p>Ce type est défini par le mot clef <code>nul</code> et représente l'absence de valeur. De ce fait, tous les autres types acceptent
+la valeur <code>nul</code>, mais le contraire n'est pas vrai (ex: le type <code>entier</code> accepte la valeur <code>nul</code>, mais le type <code>nulType</code>
+n'accepte que la valeur <code>nul</code>).</p>
+<h2 id="le-type-paire"><a class="header" href="#le-type-paire">Le type <code>paire</code></a></h2>
+<p>Une <code>paire</code> est définie par une <em>clef</em> et une <em>valeur</em>. La <em>clef</em> doit être de type <code>texte</code> et la valeur, de type
+<code>tout</code> (autrement dit, il n'y a aucune restriction de type pour la <em>valeur</em> d'une paire).</p>
+<p>Pour définir une <code>paire</code>, on écrit la <code>clef: valeur</code>.</p>
+<p>Ex:</p>
+<pre><code>&quot;bonjour&quot;: &quot;toi&quot; ✅ 
+&quot;ma clef&quot;: -123  ✅ 
+12: 222  ❌
+&quot;position&quot;: [&quot;x&quot;: 12, &quot;y&quot;: 87] ✅
+</code></pre>
+<h2 id="le-type-fonctiontype"><a class="header" href="#le-type-fonctiontype">Le type <code>fonctionType</code></a></h2>
+<p>Ce type englobe toutes les fonctions (comme <code>afficher</code>, <code>typeDe</code>, <code>tailleDe</code>, etc.). Pour en savoir plus sur les
+fonctions, voir le <a href="concepts_base/datatypes/../../fonctions/fonctions.html"><em>chapitre 4</em></a></p>
+<h2 id="le-type-structuretype"><a class="header" href="#le-type-structuretype">Le type <code>structureType</code></a></h2>
+<p>Ce type englobe toutes les structures. Pour en savoir plus sur les structures, voir le
+<a href="concepts_base/datatypes/../../structures/structures.html"><em>chapitre 5</em></a></p>
+<p><strong>Attention, le type d'une structure n'est pas le même type que l'instance d'une structure!!</strong></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="les-collections"><a class="header" href="#les-collections">Les collections</a></h1>
+<h2 id="le-type-liste"><a class="header" href="#le-type-liste">Le type <code>liste</code></a></h2>
+<p>Une liste est une collection de données ordonnées par leur ordre d'insertion.</p>
+<p>Une liste commence à un crochet ouvrant <code>[</code> et se termine par un crochet fermant <code>]</code>.</p>
+<p>Une liste <em>peut contenir d'autres listes</em></p>
+<p>Ex:</p>
+<pre><code>[]
+[vrai, 1, 21, &quot;salut&quot;]
+[&quot;hey&quot;, [&quot;toi&quot;, 2, 2, 3], 3]
+</code></pre>
+<h2 id="le-type-dict"><a class="header" href="#le-type-dict">Le type <code>dict</code></a></h2>
+<p>Un dictionnaire (type <code>dict</code>) est une collection de paires ordonnées par leur ordre d'insertion.</p>
+<p>Un dictionnaire commence à une accolade ouvrante <code>{</code> et se termine à une accolade fermante <code>}</code>.</p>
+<p>Un dictionnaire <em>peut contenir d'autres dictionnaires</em></p>
+<p>Ex:</p>
+<pre><code>{}
+{&quot;abc&quot;: 12, &quot;def&quot;: vrai, &quot;ghi&quot;: [1, 2, 3]}
+{&quot;personne&quot;: {&quot;nom&quot;: &quot;Mathis&quot;, &quot;age&quot;: 20}, &quot;addresse&quot;: &quot;123 rue Imaginaire&quot;}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="opérations-sur-les-types"><a class="header" href="#opérations-sur-les-types">Opérations sur les types</a></h2>
+<p>Les types (comme <code>entier</code>, <code>liste</code>, <code>texte</code>, etc.) sont eux-mêmes des valeurs qui peuvent être manipulées en utilisant
+certaines opérations.</p>
+<h3 id="opération-"><a class="header" href="#opération-">Opération <code>|</code></a></h3>
+<p>Cette opération (appelée <code>ou</code>) permet de combiner deux types. Le ré</p>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="annexe-a-les-mots-clefs"><a class="header" href="#annexe-a-les-mots-clefs">Annexe A: Les mots clefs</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tableau-des-types-de-données"><a class="header" href="#tableau-des-types-de-données">Tableau des types de données</a></h1>
+<div class="table-wrapper"><table><thead><tr><th>Type de donnée</th><th>Nom en AliveScript</th><th>Syntaxe</th><th>Exemples</th></tr></thead><tbody>
+<tr><td>Entier</td><td>entier</td><td>On écrit le nombre entier.<br/><br/><em>On peut mettre un <code>-</code> devant pour le rendre négatif</em>.</td><td><code>12</code>, <code>-34</code>, <code>28121</code></td></tr>
+<tr><td>Décimal</td><td>decimal</td><td>Il existe 3 façons d'écrire un nombre décimal:<br/>1. On écrit un <code>.</code> entre deux nombres entiers.<br/>2. On écrit un <code>.</code> devant un nombre entier (signifie <code>0.</code>).<br/>3. On écrit un nombre entier suivi d'un <code>.</code> (signifie <code>.0</code>).<br/><br/><em>On peut mettre un <code>-</code> devant pour le rendre négatif</em>.</td><td><code>.012</code>, <code>12.2</code>, <code>19.</code>, <code>-0.12842</code></td></tr>
+<tr><td>Nombre</td><td>nombre</td><td>Le type <code>nombre</code> est une <strong>alias</strong> pour <code>entier | decimal</code>.</td><td><code>-3391</code>, <code>8921.12</code>, <code>0.42069</code></td></tr>
+<tr><td>Texte</td><td>texte</td><td>On met des doubles guillemets (<code>&quot;</code>) ou des simples guillemets (<code>'</code>) de part et d'autre du texte.<br/><br/><em>Le symbole choisit doit être le même au début et à la fin du texte.</em></td><td><code>&quot;bonjour&quot;</code><br/><code>'ceci = texte'</code><br/><code>&quot;1234abcde&quot;</code></td></tr>
+<tr><td>Booléen</td><td>booleen</td><td>Les booléens sont représentés par les mots clefs <code>vrai</code> et <code>faux</code>.</td><td><code>vrai</code>, <code>faux</code></td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>

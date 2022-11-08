@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html lang="fr" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Bonjour, Monde! - AliveScript Documentation</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../intro.html">Introduction</a></li><li class="chapter-item expanded "><a href="../premier_pas/premier_pas.html"><strong aria-hidden="true">1.</strong> Premiers pas</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../premier_pas/premier_defi.html"><strong aria-hidden="true">1.1.</strong> Créer son premier défi</a></li><li class="chapter-item expanded "><a href="../premier_pas/bonjour_monde.html" class="active"><strong aria-hidden="true">1.2.</strong> Bonjour, Monde!</a></li><li class="chapter-item expanded "><a href="../premier_pas/bouger_la_voiture.html"><strong aria-hidden="true">1.3.</strong> Bouger la voiture</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts_base/concepts_base.html"><strong aria-hidden="true">2.</strong> Concepts de base</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts_base/commentaires.html"><strong aria-hidden="true">2.1.</strong> Les commentaires</a></li><li class="chapter-item expanded "><a href="../concepts_base/datatypes/datatypes.html"><strong aria-hidden="true">2.2.</strong> Les types de données</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts_base/datatypes/types_primitifs.html"><strong aria-hidden="true">2.2.1.</strong> Les types primitifs</a></li><li class="chapter-item expanded "><a href="../concepts_base/datatypes/collections.html"><strong aria-hidden="true">2.2.2.</strong> Les collections</a></li><li class="chapter-item expanded "><a href="../concepts_base/datatypes/operations.html"><strong aria-hidden="true">2.2.3.</strong> Opérations sur les types</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts_base/io.html"><strong aria-hidden="true">2.3.</strong> Les entrées et sorties (IO)</a></li><li class="chapter-item expanded "><a href="../concepts_base/variables.html"><strong aria-hidden="true">2.4.</strong> Les variables et les constantes</a></li><li class="chapter-item expanded "><a href="../concepts_base/operateurs/operateurs.html"><strong aria-hidden="true">2.5.</strong> Les opérateurs</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts_base/operateurs/binaires.html"><strong aria-hidden="true">2.5.1.</strong> Les opérateurs binaires</a></li><li class="chapter-item expanded "><a href="../concepts_base/operateurs/logiques.html"><strong aria-hidden="true">2.5.2.</strong> Les opérateurs logiques</a></li><li class="chapter-item expanded "><a href="../concepts_base/operateurs/iterables.html"><strong aria-hidden="true">2.5.3.</strong> Les opérateurs sur les itérables</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../structure_controle/structure_controle.html"><strong aria-hidden="true">3.</strong> Les structures de contrôle</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../structure_controle/if_else.html"><strong aria-hidden="true">3.1.</strong> Les structures conditionnelles</a></li><li class="chapter-item expanded "><a href="../structure_controle/loops.html"><strong aria-hidden="true">3.2.</strong> Les boucles</a></li></ol></li><li class="chapter-item expanded "><a href="../fonctions/fonctions.html"><strong aria-hidden="true">4.</strong> Les fonctions</a></li><li class="chapter-item expanded "><a href="../structures/structures.html"><strong aria-hidden="true">5.</strong> Les structures</a></li><li class="chapter-item expanded "><a href="../modules/modules.html"><strong aria-hidden="true">6.</strong> Les modules</a></li><li class="chapter-item expanded "><a href="../guessing_game/guessing_game.html"><strong aria-hidden="true">7.</strong> Programmer un jeu de devinettes</a></li><li class="chapter-item expanded "><a href="../concepts_avances/concepts_avances.html"><strong aria-hidden="true">8.</strong> Concepts avancés</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts_avances/getter_setter.html"><strong aria-hidden="true">8.1.</strong> Les getter et les setter</a></li></ol></li><li class="chapter-item expanded "><a href="../annexe/annexe.html"><strong aria-hidden="true">9.</strong> Annexe</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../annexe/mots_clefs.html"><strong aria-hidden="true">9.1.</strong> Annexe A: Mots clefs</a></li><li class="chapter-item expanded "><a href="../annexe/tableau_datatypes.html"><strong aria-hidden="true">9.2.</strong> Annexe B: Tableau des types de données</a></li><li class="chapter-item expanded "><a href="../annexe/liste_modules.html"><strong aria-hidden="true">9.3.</strong> Annexe C: Listes des modules</a></li><li class="chapter-item expanded "><a href="../annexe/futur.html"><strong aria-hidden="true">9.4.</strong> Annexe D: Le futur d'AliveScript</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">AliveScript Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="bonjour-monde"><a class="header" href="#bonjour-monde">Bonjour, Monde!</a></h1>
+<h2 id="Écrire-son-premier-programme-en-alivescript"><a class="header" href="#Écrire-son-premier-programme-en-alivescript">Écrire son premier programme en AliveScript</a></h2>
+<p>Le programme le plus simple à faire en AliveScript permet d'afficher <code>Bonjour, Monde!</code>
+dans la console.</p>
+<p>Pour ce faire, on écrit:</p>
+<pre><code>afficher &quot;Bonjour, Monde!&quot;
+</code></pre>
+<p>Puis on exécute le programme en appuyant sur le</p>
+<p><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="play-circle" class="svg-inline--fa fa-play-circle fa-w-16 fa-fw fa-2x button-fa-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm115.7 272l-176 101c-15.8 8.8-35.7-2.5-35.7-21V152c0-18.4 19.8-29.8 35.7-21l176 107c16.4 9.2 16.4 32.9 0 42z"></path></svg>
+<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm115.7 272l-176 101c-15.8 8.8-35.7-2.5-35.7-21V152c0-18.4 19.8-29.8 35.7-21l176 107c16.4 9.2 16.4 32.9 0 42z"></path>
+</svg></p>
+<p>La console devrait alors afficher</p>
+<pre><code>Bonjour, Monde!
+[exécution terminée]
+</code></pre>
+<p>Si c'est le cas, félicitation, vous pouvez maintenant ajouter programmeur d'AliveScript à votre C.V.!</p>
+<h2 id="décortiquer-le-programme"><a class="header" href="#décortiquer-le-programme">Décortiquer le programme</a></h2>
+<p>Malgré l'apparente simplicité de ce qu'on vient de faire, un tel programme ne pourrait pas être
+possible sans l'interaction de multiples systèmes.</p>
+<p>La première partie (<code>afficher</code>) est une <strong>fonction</strong> que nous appelons en lui passant un <strong>argument</strong>
+(<code>&quot;Bonjour, Monde!&quot;</code>). La fonction <code>afficher</code> imprime <strong>l'argument</strong> sur la console. Si les termes
+<strong>fonction</strong>, <strong>appeler</strong> et <strong>argument</strong> ne vous sont pas familiers, pas de panique, nous
+y reviendrons dans le <em>chapitre 4</em>.</p>
+<p>La deuxième partie (<code>&quot;Bonjour, Monde!&quot;</code>) est une donnée de type <strong>texte</strong> qui représente la phrase
+<strong>Bonjour, Monde!</strong>. Afin que cette phrase soit considérée de type <strong>texte</strong> par AliveScript, nous
+l'avons mise entre doubles guillemets <code>&quot;</code>. Nous verrons le type <strong>texte</strong> plus en détails ainsi que les
+différents types de données dans le <em>chapitre 2.2</em>.</p>
+<h2 id="cest-quoi-appeler-une-fonction"><a class="header" href="#cest-quoi-appeler-une-fonction">C'est quoi <em>appeler une fonction</em>?</a></h2>
+<p>Non, nous n'avons pas besoin de son numéro de téléphone pour l'appeler, ce terme a une signification
+particulière en programmation.</p>
+<p>Appeler une fonction, c'est de lui demander d'exécuter une série d'opérations prédéfinies par la fonction en
+utilisant les différentes valeurs que nous lui fournissons (ces valeurs sont appelées <strong>arguments</strong>). Dans le cas de la
+fonction <code>afficher</code>, elle imprime dans la console l'argument qui lui est passé lorsque nous l'appelons.</p>
+<p>Nous reviendrons sur la subtilité de l'appel de fonction, ainsi que sur les autres aspects des fonctions,
+plus en détails dans le <em>chapitre 4</em>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../premier_pas/premier_defi.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../premier_pas/bouger_la_voiture.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../premier_pas/premier_defi.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../premier_pas/bouger_la_voiture.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
