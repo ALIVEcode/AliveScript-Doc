@@ -136,15 +136,36 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<p>Bonjour et bienvenue dans le monde vaste et fascinant de la programmation 🥳👨‍💻👩‍💻!!</p>
+<p>Je suis Mathis Laroche, auteur du langage de
+programmation AliveScript, et le livre qui se trouve devant toi est un guide à la programmation dans ce langage.</p>
+<h2 id="quest-ce-quun-langage-de-programmation"><a class="header" href="#quest-ce-quun-langage-de-programmation">Qu'est-ce qu'un langage de programmation?</a></h2>
+<p>Un langage de programmation, c'est le meilleur compromis que nous ayons trouvé afin de permettre aux humains de dire à
+l'ordinateur quoi faire sans que cela soit trop compliqué à comprendre pour les autres humains. En d'autres mots,
+c'est un langage, tout comme le français ou l'anglais, qui possède un <strong>ensemble de règles et de contraintes</strong> à
+respecter. Cependant, contrairement à la plupart des langages parlés, les règles d'un langage de programmation sont
+strictes afin d'éviter, le plus possible, l'ambiguïté.</p>
 <h2 id="lire-du-code-alivescript"><a class="header" href="#lire-du-code-alivescript">Lire du code AliveScript</a></h2>
 <p>Un programme écrit en AliveScript se lit, comme la plupart des langages de
 programmation, de gauche à droite et de haut en bas.</p>
+<p>Ex:</p>
+<pre><code># Ceci est la première ligne de code.
+
+afficher &quot;Bonjour!&quot;  # Ceci est la 3e ligne de code, la 2e ligne est vide.
+3 + 1 + 2  # D'abord 3 + 1 puis 4 + 2 (sens de lecture de gauche à droite)
+</code></pre>
 <h2 id="quest-ce-quun-programme-au-juste"><a class="header" href="#quest-ce-quun-programme-au-juste">Qu'est-ce qu'un programme au juste?</a></h2>
-<p>À compléter...</p>
-<h2 id="les-mots-clefs"><a class="header" href="#les-mots-clefs">Les mots clefs</a></h2>
-<p>AliveScript possède un ensemble de mots réservés (appelés <em>mots clefs</em>) qui ne
+<p>Un programme, c'est le nom qu'on donne à un ensemble de lignes de code qui font une ou plusieurs actions
+lorsque exécutées. Par exemple, un programme peut afficher <code>Bonjour, Monde!</code> dans la console ou encore envoyer une fusée
+sur la Lune! Le terme <em>programme</em> est très large. Ici, il fera référence aux morceaux de code que vous serez invités à
+lire tout au long de ce livre.</p>
+<!--
+## Les mots clefs
+
+AliveScript possède un ensemble de mots réservés (appelés *mots clefs*) qui ne
 peuvent pas être utilisés en dehors du contexte dans lequel ils sont définis.
-La liste des <em>mots clefs</em> d'AliveScript se trouve à l'<a href="annexe/mots_clefs.html">Annexe A</a>.</p>
+La liste des *mots clefs* d'AliveScript se trouve à l'[Annexe A](annexe/mots_clefs.md).
+-->
 <div style="break-before: page; page-break-before: always;"></div><h1 id="chapitre-1-bonjour-monde"><a class="header" href="#chapitre-1-bonjour-monde">Chapitre 1: Bonjour monde!</a></h1>
 <h2 id="Écrire-son-premier-programme-en-alivescript"><a class="header" href="#Écrire-son-premier-programme-en-alivescript">Écrire son premier programme en AliveScript!</a></h2>
 <p>Dans un</p>
@@ -385,7 +406,13 @@ fonctions, voir le <a href="concepts_base/datatypes/../../fonctions/fonctions.ht
 <p>Les types (comme <code>entier</code>, <code>liste</code>, <code>texte</code>, etc.) sont eux-mêmes des valeurs qui peuvent être manipulées en utilisant
 certaines opérations.</p>
 <h3 id="opération-"><a class="header" href="#opération-">Opération <code>|</code></a></h3>
-<p>Cette opération (appelée <code>ou</code>) permet de combiner deux types. Le ré</p>
+<p>Cette opération (appelée <code>ou</code>) permet de combiner deux types. Le type résultant est compatible avec les deux types
+combinés.</p>
+<p>Ex:</p>
+<ul>
+<li><code>entier | decimal</code> est compatible autant avec <code>12.123</code> qu'avec <code>-2</code></li>
+<li><code>liste | entier | texte</code> est compatible autant avec <code>69420</code> qu'avec <code>[1, 2, 3, &quot;salut&quot;]</code> et <code>&quot;mon nom est Mathis&quot;</code></li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="annexe-a-les-mots-clefs"><a class="header" href="#annexe-a-les-mots-clefs">Annexe A: Les mots clefs</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="tableau-des-types-de-données"><a class="header" href="#tableau-des-types-de-données">Tableau des types de données</a></h1>
 <div class="table-wrapper"><table><thead><tr><th>Type de donnée</th><th>Nom en AliveScript</th><th>Syntaxe</th><th>Exemples</th></tr></thead><tbody>
@@ -394,6 +421,12 @@ certaines opérations.</p>
 <tr><td>Nombre</td><td>nombre</td><td>Le type <code>nombre</code> est une <strong>alias</strong> pour <code>entier | decimal</code>.</td><td><code>-3391</code>, <code>8921.12</code>, <code>0.42069</code></td></tr>
 <tr><td>Texte</td><td>texte</td><td>On met des doubles guillemets (<code>&quot;</code>) ou des simples guillemets (<code>'</code>) de part et d'autre du texte.<br/><br/><em>Le symbole choisit doit être le même au début et à la fin du texte.</em></td><td><code>&quot;bonjour&quot;</code><br/><code>'ceci = texte'</code><br/><code>&quot;1234abcde&quot;</code></td></tr>
 <tr><td>Booléen</td><td>booleen</td><td>Les booléens sont représentés par les mots clefs <code>vrai</code> et <code>faux</code>.</td><td><code>vrai</code>, <code>faux</code></td></tr>
+<tr><td>Type Nul</td><td>nulType</td><td>Le mot clef <code>nul</code></td><td><code>nul</code></td></tr>
+<tr><td>Paire</td><td>paire</td><td><code>clef: valeur</code>. La clef doit être de type <code>texte</code>. La valeur n'a pas de restriction de type.</td><td><code>&quot;bonjour&quot;: &quot;toi&quot;</code>, <code>&quot;position&quot;: [&quot;x&quot;: 12, &quot;y&quot;: 87]</code></td></tr>
+<tr><td>Type Fonction</td><td>fonctionType</td><td></td><td></td></tr>
+<tr><td>Type Structure</td><td>structureType</td><td></td><td></td></tr>
+<tr><td>Liste</td><td>liste</td><td></td><td></td></tr>
+<tr><td>Dictionnaire</td><td>dict</td><td></td><td></td></tr>
 </tbody></table>
 </div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div>
                     </main>

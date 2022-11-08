@@ -138,7 +138,13 @@
 <p>Les types (comme <code>entier</code>, <code>liste</code>, <code>texte</code>, etc.) sont eux-mêmes des valeurs qui peuvent être manipulées en utilisant
 certaines opérations.</p>
 <h3 id="opération-"><a class="header" href="#opération-">Opération <code>|</code></a></h3>
-<p>Cette opération (appelée <code>ou</code>) permet de combiner deux types. Le ré</p>
+<p>Cette opération (appelée <code>ou</code>) permet de combiner deux types. Le type résultant est compatible avec les deux types
+combinés.</p>
+<p>Ex:</p>
+<ul>
+<li><code>entier | decimal</code> est compatible autant avec <code>12.123</code> qu'avec <code>-2</code></li>
+<li><code>liste | entier | texte</code> est compatible autant avec <code>69420</code> qu'avec <code>[1, 2, 3, &quot;salut&quot;]</code> et <code>&quot;mon nom est Mathis&quot;</code></li>
+</ul>
 
                     </main>
 
