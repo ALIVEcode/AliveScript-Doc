@@ -17,9 +17,10 @@ lorsque exécutées. Par exemple, un programme peut afficher `Bonjour, Monde!` d
 sur la Lune! Le terme _programme_ est très large. Ici, il fera référence aux morceaux de code que vous serez invités à
 lire tout au long de ce livre.
 
-### Un énoncé (ou statement en anglais)
+### Les énoncés
 
-Un énoncé est le nom donné à l'action principal réalisé par une _ligne de code_ (un énoncé peut s'étendre sur plusieurs
+Un énoncé (appelé _statement_ en anglais) est le nom donné à l'action principal réalisé par une _ligne de code_ (un
+énoncé peut s'étendre sur plusieurs
 lignes, mais cela est rarement le cas). Il ne peut y avoir qu'**un seul énoncé par ligne de code**, mais un énoncé peut
 inclure. Contrairement à une expression, un énoncé ne produit aucune valeur après avoir été exécuté.
 
@@ -30,7 +31,7 @@ Ex:
 * `var a = 12 + 3` -> ici, l'énoncé est _`déclarer`_ ayant comme action la déclaration de la variable `a` avec la valeur
   donnée par le résultat de l'expression `12 + 3`.
 
-### Une expression
+### Les expressions
 
 Une expression est une sous-action qui, une fois évaluée (ou réduite), produit une valeur. Le nombre
 maximum d'expressions dépend de l'énoncé dans lequel se retrouve l'expression.

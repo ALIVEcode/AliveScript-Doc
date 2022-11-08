@@ -1,6 +1,6 @@
 # Introduction
 
-Bonjour et bienvenue dans le monde vaste et fascinant de la programmation 🥳👨‍💻👩‍💻!!
+Bonjour et bienvenue dans le monde vaste et fascinant de la programmation 👨‍💻👩‍💻!!
 
 Je suis Mathis Laroche, auteur du langage de
 programmation AliveScript, et le livre qui se trouve devant toi est un guide à la programmation dans ce langage.
