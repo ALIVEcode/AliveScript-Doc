@@ -28,27 +28,25 @@ Si c'est le cas, félicitation, vous pouvez maintenant ajouter programmeur d'Ali
 
 ## Décortiquer le programme
 
-Malgré l'apparente simplicité de ce qu'on vient de faire, un tel programme ne pourrait pas être
-possible sans l'interaction de multiples systèmes.
+Malgré l'apparente simplicité de ce qu'on vient de faire, un tel programme ne pourrait pas être possible sans
+l'interaction de multiples systèmes.
 
 La première partie (`afficher`) est une **fonction** que nous appelons en lui passant un **argument**
-(`"Bonjour, Monde!"`). La fonction `afficher` imprime **l'argument** sur la console. Si les termes
-**fonction**, **appeler** et **argument** ne vous sont pas familiers, pas de panique, nous
-y reviendrons dans le _chapitre 4_.
+(`"Bonjour, Monde!"`). La fonction `afficher` imprime **l'argument** sur la console. Si les termes **fonction**,
+**appeler** et **argument** ne vous sont pas familiers, pas de panique, nous y reviendrons dans le _chapitre 4_.
 
-La deuxième partie (`"Bonjour, Monde!"`) est une donnée de type **texte** qui représente la phrase
-**Bonjour, Monde!**. Afin que cette phrase soit considérée de type **texte** par AliveScript, nous
-l'avons mise entre doubles guillemets `"`. Nous verrons le type **texte** plus en détails ainsi que les
-différents types de données dans le _chapitre 2.2_.
+La deuxième partie (`"Bonjour, Monde!"`) est une donnée de type **texte** qui représente la phrase **Bonjour, Monde!**.
+Afin que cette phrase soit considérée de type **texte** par AliveScript, nous l'avons mise entre doubles guillemets `"`.
+Nous verrons le type **texte** plus en détails ainsi que les différents types de données dans le _chapitre 2.2_.
 
 ## C'est quoi _appeler une fonction_?
 
-Non, nous n'avons pas besoin de son numéro de téléphone pour l'appeler, ce terme a une signification
+Non, nous n'avons pas besoin d'un numéro de téléphone pour appeler une fonction, ce terme a une signification
 particulière en programmation.
 
-Appeler une fonction, c'est de lui demander d'exécuter une série d'opérations prédéfinies par la fonction en
-utilisant les différentes valeurs que nous lui fournissons (ces valeurs sont appelées **arguments**). Dans le cas de la
+Appeler une fonction, c'est de lui demander d'exécuter une série d'opérations prédéfinies par la fonction en utilisant
+les différentes valeurs que nous lui fournissons (ces valeurs sont appelées **arguments**). Dans le cas de la
 fonction `afficher`, elle imprime dans la console l'argument qui lui est passé lorsque nous l'appelons.
 
-Nous reviendrons sur la subtilité de l'appel de fonction, ainsi que sur les autres aspects des fonctions,
-plus en détails dans le _chapitre 4_.
+Nous reviendrons sur la subtilité de l'appel de fonction, ainsi que sur les autres aspects des fonctions, plus en
+détails dans le _chapitre 4_.

@@ -40,3 +40,4 @@
     - [Annexe B: Tableau des types de données](annexe/tableau_datatypes.md)
     - [Annexe C: Listes des modules](annexe/liste_modules.md)
     - [Annexe D: Le futur d'AliveScript](annexe/futur.md)
+    - [Annexe E: La terminologie](annexe/terminologie.md)
