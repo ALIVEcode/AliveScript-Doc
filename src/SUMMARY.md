@@ -3,7 +3,7 @@
 [Introduction](./intro.md)
 
 - [Premiers pas](premier_pas/premier_pas.md)
-    - [Créer son premier défi](premier_pas/premier_defi.md)
+    - [Lire du code AliveScript](premier_pas/lire_alivescript.md)
     - [Bonjour, Monde!](premier_pas/bonjour_monde.md)
     - [Bouger la voiture](premier_pas/bouger_la_voiture.md)
 
