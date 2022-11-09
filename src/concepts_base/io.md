@@ -33,7 +33,7 @@ l'utilisateur d'entrer une valeur puis enregistre cette valeur dans une variable
 voir [_chapitre 2.4_](./variables.md))
 
 Les différentes variations de l'énoncé `lire` (pour la signification des symboles,
-voir [Annexe F](../annexe/legende_syntaxe.md):
+voir [Annexe F](../annexe/legende_syntaxe.md)):
 
 * Lire: `lire [var] <nom_var>[, <message>]`
     * Si `var` est inclus, l'énoncé déclare la variable en plus de lui affecter la valeur entrée par l'utilisateur.

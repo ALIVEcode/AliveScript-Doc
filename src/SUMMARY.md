@@ -12,6 +12,7 @@
     - [Les types de données](concepts_base/datatypes/datatypes.md)
         - [Les types primitifs](concepts_base/datatypes/types_primitifs.md)
         - [Les collections](concepts_base/datatypes/collections.md)
+        - [Les types particuliers](concepts_base/datatypes/type_particulier.md)
         - [Opérations sur les types](concepts_base/datatypes/operations.md)
     - [Les entrées et sorties (IO)](concepts_base/io.md)
     - [Les variables et les constantes](concepts_base/variables.md)

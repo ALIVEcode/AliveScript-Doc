@@ -6,7 +6,7 @@ AliveScript supporte 2 types numériques (`entier` et `decimal`) ainsi qu'un typ
 
 ### Le type `entier`
 
-On écrit le nombre entier littéralement.
+On écrit le nombre simplement le nombre entier.
 *On peut mettre un `-` devant pour le rendre négatif*.
 
 Ex:
