@@ -1,5 +1,7 @@
 # Les types primitifs
 
+Les types primitifs sont les blocs légos
+
 ## Les types numériques
 
 AliveScript supporte 2 types numériques (`entier` et `decimal`) ainsi qu'un type englobant les deux (`nombre`).
@@ -70,22 +72,6 @@ Type représentant le concept de vérité. Les booléens sont définis par les m
 Ce type est défini par le mot clef `nul` et représente l'absence de valeur. De ce fait, tous les autres types acceptent
 la valeur `nul`, mais le contraire n'est pas vrai (ex: le type `entier` accepte la valeur `nul`, mais le type `nulType`
 n'accepte que la valeur `nul`).
-
-## Le type `paire`
-
-Une `paire` est définie par une _clef_ et une _valeur_. La _clef_ doit être de type `texte` et la valeur, de type
-`tout` (autrement dit, il n'y a aucune restriction de type pour la _valeur_ d'une paire).
-
-Pour définir une `paire`, on écrit la `clef: valeur`.
-
-Ex:
-
-```
-"bonjour": "toi" ✅ 
-"ma clef": -123  ✅ 
-12: 222  ❌
-"position": ["x": 12, "y": 87] ✅
-```
 
 ## Le type `fonctionType`
 

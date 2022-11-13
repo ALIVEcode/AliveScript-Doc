@@ -1,17 +1,19 @@
 # Les types de données
 
-Chaque valeur présente dans AliveScript est d’un certain type de donnée. Ces types ont une double utilité:
+Un type, c'est une manière de catégoriser des données selon certaines propriétés.
 
-* Permettre de facilement classifier les valeurs en catégories.
-* Permettre à AliveScript de s’assurer que certaines opérations sont valides avant même qu’elles ne soient exécutées.
+Chaque donnée présente dans AliveScript est associée directement à un type de donnée. Ces types ont une double utilité:
 
-> Astuce:  
-> Si tu veux avoir plus d'informations sur un type, clique sur son nom pour être redirigé vers sa description!
+1. Permettre de facilement classifier les valeurs en catégories.
+2. Permettre à AliveScript de s’assurer que certaines opérations sont valides avant même qu’elles ne soient exécutées.
 
+> Astuce 🔎  
 > Pour voir tous les types de données de manière synthétisée, voir le tableau des types de données dans
 > l'[Annexe B](../../annexe/tableau_datatypes.md)
 
 ### Liste des types primitifs
+
+[Cliquez ici](types_primitifs.md) pour en savoir plus sur les types primitifs.
 
 On appelle **type primitif** les types suivants:
 
@@ -28,6 +30,8 @@ On appelle **type primitif** les types suivants:
 
 ### Liste des types de collections
 
+[Cliquez ici](collections.md) pour en savoir plus sur les types de collections.
+
 On appelle **type de collection** les types suivants:
 
 * Le type [`liste`](./collections.md#le-type-liste)
@@ -40,17 +44,18 @@ On appelle **type particulier** les types suivants:
 * Le type [`iterable`](./type_particulier.md#le-type-iterable)
 * Le type [`tout`](./type_particulier.md#le-type-tout)
 * Le type [`rien`](./type_particulier.md#le-type-rien)
-
-<br>
+* Le type [`paire`](./type_particulier.md#le-type-paire)
+  <br>
 
 ---
 
 ## Rappel pour ceux qui s'y connaissent
 
-> Afin de savoir de quel type est une certaine valeur, il suffit d'utiliser la fonction builtin `typeDe`.
-> Ex:
-> ```
-> afficher typeDe(12)  # entier
-> afficher typeDe(-420.69)  # decimal
-> afficher typeDe(afficher)  # fonctionType
-> ```
+Afin de savoir de quel type est une certaine valeur, il suffit d'utiliser la fonction builtin `typeDe`.
+Ex:
+
+```
+afficher typeDe(12)  # entier
+afficher typeDe(-420.69)  # decimal
+afficher typeDe(afficher)  # fonctionType
+```

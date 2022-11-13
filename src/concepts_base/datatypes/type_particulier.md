@@ -3,6 +3,22 @@
 Les types particuliers sont les types de données qui ne sont ni primitif ni une collection. Ils ont des significations
 spéciales, voilà pourquoi ils méritent d'être traité séparément!
 
+## Le type `paire`
+
+Une `paire` est définie par une association de deux données `clef:valeur`. La _clef_ doit être de type `texte` et la valeur, de type
+`tout` (autrement dit, il n'y a aucune restriction de type pour la _valeur_ d'une paire).
+
+Pour définir une `paire`, on écrit la `clef: valeur`.
+
+Ex:
+
+```
+"bonjour": "toi" ✅ 
+"ma clef": -123  ✅ 
+12: 222  ❌
+"position": ["x": 12, "y": 87] ✅
+```
+
 ## Le type `iterable`
 
 Le type `iterable` est un type qui englobe les types suivants:

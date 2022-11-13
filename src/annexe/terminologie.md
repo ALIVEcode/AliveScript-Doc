@@ -1,6 +1,8 @@
-# Terminologie
+# Lexique
 
 Ici, on retrouve les définitions des termes et concepts utilisés tout au long de l'ouvrage.
+
+## Concept de base
 
 ### Langage de programmation
 
