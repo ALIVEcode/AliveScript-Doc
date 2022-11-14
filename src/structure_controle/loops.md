@@ -179,41 +179,45 @@ afficher "Bravo, vous avez réussi!"
 
 ### Description et fonctionnement
 
-La boucle `repeter` est la boucle la plus simple qu'il est possible de faire en AliveScript.
+La boucle `pour` est une boucle utilisant des données de
+type [`iterable`](../concepts_base/datatypes/type_particulier.md#le-type-iterable) qui permet de passer sur chaque
+élément de ces données.
 
-Lors de l'énoncé d'ouverture, on précise le nombre de fois que la boucle sera effectuée. À chaque fin d'itération de la
-boucle, on remonte à l'énoncé d'ouverture jusqu'à ce que la boucle ait été exécutée un nombre de fois précisé dans
-l'énoncé d'ouverture.
+Lors de l'énoncé d'ouverture, on précise deux choses:
+
+* Une valeur [`iterable`](../concepts_base/datatypes/type_particulier.md#le-type-iterable) qui sera traversée.
+* Une variable qui servira à enregistrer l'élément courant de l'iterable (qui changera de valeur à chaque l'itération).
 
 ### Syntaxe
 
-L'[énoncé](../annexe/lexique.md#les-énoncés) d'ouverture de cette boucle est le mot clef `repeter` suivi d'une
-valeur entière (voir [type entier](../concepts_base/datatypes/types_primitifs.md#le-type-entier)) ou d'une variable
-contenant une valeur entière.
+L'[énoncé](../annexe/lexique.md#les-énoncés) d'ouverture de cette boucle est le mot clef `pour` suivi d'une
+variable puis du mot clef `dans` et d'une valeur de
+type [`iterable`](../concepts_base/datatypes/type_particulier.md#le-type-iterable).
 
-L'[énoncé](../annexe/lexique.md#les-énoncés) de fermeture est le mot clef `fin repeter`
+L'[énoncé](../annexe/lexique.md#les-énoncés) de fermeture est le mot clef `fin pour`
 
 ```
-repeter <valeur entière>
+pour [var] <nom_var> dans <valeur iterable>
     # code à l'intérieur de la boucle
-fin repeter
+fin pour
 ```
 
 ### Utilité
 
-La boucle `repeter` est utile lorsque le **nombre d'itérations de la boucle est connu** et que le contenu de la boucle
-**ne dépend pas de l'itération**, c'est-à-dire qu'il n'y a pas de différences entre la première et la troisième
-itérations.
+La boucle `pour` est utile lorsque le **nombre d'itérations de la boucle est connu** et que la boucle sert à agir sur
+tous les éléments d'un [`iterable`](../concepts_base/datatypes/type_particulier.md#le-type-iterable) (incluant les
+suites de nombres).
 
-Exemple où on fait la somme de 5 lancers de dés:
+Exemple où on compte le nombre d'espaces dans une phrase:
 
 ```
-var sommeLancers = 0
-repeter 5
-    var lancer = aleatoire({1...6})  # nombre aléatoire entre 1 et 6
-    afficher "Lancer: " + lancer  # afficher le lancers
-    sommeLancers += lancer  # on l'ajoute à notre somme
-fin repeter
-            
-afficher "La somme des lancers est " + sommeLancers
+const maPhrase = "Le gentil lapin saute dans les hautes herbes vertes" 
+var nbEspaces = 0
+pour var lettre dans maPhrase 
+    si lettre == " " alors
+        nbEspaces += 1
+    fin si
+fin pour
+
+afficher "Il y a " + nbEspaces + " espaces dans ma phrase."
 ```
