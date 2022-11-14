@@ -763,7 +763,7 @@ type <a href="structure_controle/../concepts_base/datatypes/type_particulier.htm
 variable puis du mot clef <code>dans</code> et d'une valeur de
 type <a href="structure_controle/../concepts_base/datatypes/type_particulier.html#le-type-iterable"><code>iterable</code></a>.</p>
 <p>L'<a href="structure_controle/../annexe/lexique.html#les-%C3%A9nonc%C3%A9s">énoncé</a> de fermeture est le mot clef <code>fin pour</code></p>
-<pre><code>pour [var] &lt;nom_var&gt; dans &lt;valeur iterable&gt;
+<pre><code>pour [var|const] &lt;nom_var&gt; dans &lt;valeur iterable&gt;
     # code à l'intérieur de la boucle
 fin pour
 </code></pre>
@@ -774,7 +774,7 @@ suites de nombres).</p>
 <p>Exemple où on compte le nombre d'espaces dans une phrase:</p>
 <pre><code>const maPhrase = &quot;Le gentil lapin saute dans les hautes herbes vertes&quot; 
 var nbEspaces = 0
-pour var lettre dans maPhrase 
+pour var lettre dans maPhrase
     si lettre == &quot; &quot; alors
         nbEspaces += 1
     fin si
@@ -876,13 +876,57 @@ afficher &quot;Nous sommes revenu dans le bloc principal&quot;
 <tr><td>Liste</td><td>liste</td><td></td><td></td></tr>
 <tr><td>Dictionnaire</td><td>dict</td><td></td><td></td></tr>
 </tbody></table>
-</div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="légende-des-symboles-utilisés-dans-les-exemples"><a class="header" href="#légende-des-symboles-utilisés-dans-les-exemples">Légende des symboles utilisés dans les exemples</a></h1>
+</div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="le-futur-dalivescript"><a class="header" href="#le-futur-dalivescript">Le futur d'AliveScript</a></h1>
+<blockquote>
+<p>Les fonctionnalités en italiques sont loins d'être définitives et nous aimerions entendre votre avis dessus!</p>
+</blockquote>
+<h2 id="pour-les-structures"><a class="header" href="#pour-les-structures">Pour les structures</a></h2>
+<ul>
+<li>
+<p>Support pour la déclaration de fonctions dans les structures (appelés méthodes)</p>
+</li>
+<li>
+<p>Support pour la variable <code>inst</code> (signifiant <strong>instance</strong>) afin de faire référence à la structure appelant la
+méthode. (similaire à <code>this</code> ou <code>self</code> dans d'autres langages)</p>
+</li>
+</ul>
+<h2 id="pour-les-types"><a class="header" href="#pour-les-types">Pour les types</a></h2>
+<p>⚠ En construction ⚠</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="légende-des-symboles-utilisés-dans-les-énoncés-et-les-expressions"><a class="header" href="#légende-des-symboles-utilisés-dans-les-énoncés-et-les-expressions">Légende des symboles utilisés dans les énoncés et les expressions</a></h1>
 <div class="table-wrapper"><table><thead><tr><th>Symbole</th><th>Signification</th><th>Exemple</th></tr></thead><tbody>
-<tr><td>[...]</td><td>Ce qui est entre les deux crochets est optionnel</td><td><code>abc[, ceci]</code> =&gt; <code>abc, ceci</code> OU <code>abc</code></td></tr>
-<tr><td>&lt;nom_var&gt;</td><td>Ce qui est entre les deux crochets est optionnel</td><td><code>&lt;nom_var&gt;</code> =&gt; <code>nom</code>, <code>maVariable</code>, <code>foo</code></td></tr>
-<tr><td>...</td><td>Valeur littérale</td><td><code>abc ; , def</code> =&gt; <code>abc ; , def</code></td></tr>
+<tr><td>[...]</td><td>Ce qui est entre les deux crochets est optionnel</td><td><code>abc[, ceci]</code>:<br/><code>abc, ceci</code> OU <code>abc</code></td></tr>
+<tr><td>&lt;...&gt;</td><td>Ce qui est écrit entre les <code>&lt; &gt;</code> sert à indiquer par quoi il faut les remplacer dans le code.</td><td><code>&lt;nom_var&gt;</code>:<br/><code>nom</code>, <code>maVariable</code>, <code>foo</code>, etc.</td></tr>
+<tr><td><code>|</code></td><td>Sépare des variations possibles</td><td><code>[var|const]</code>:<br/><code>var</code> OU <code>const</code></td></tr>
+<tr><td><code>*</code> après un des symboles spécial</td><td>On peut le répéter 0 fois et plus.</td><td><code>&lt;valeur&gt; [+ &lt;valeur&gt;]*</code>:<br/><code>10</code>, <code>12 + 2</code>, <code>34 + 6 + 5</code>, etc.</td></tr>
+<tr><td><code>+</code> après un des symboles spécial</td><td>On peut le répéter 1 fois et plus.</td><td><code>&lt;valeur&gt; [+ &lt;valeur&gt;]+</code>:<br/> <code>12 + 2</code>, <code>34 + 6 + 5</code>, etc. (mais pas <code>10</code>)</td></tr>
+<tr><td>...</td><td>Valeur littérale</td><td><code>lire dans</code>:<br/><code>lire dans</code></td></tr>
 </tbody></table>
 </div>
+<h3 id="exemples-complets"><a class="header" href="#exemples-complets">Exemples complets</a></h3>
+<p>Description du bloc <code>si</code>. <code>&lt;condition&gt;</code> sert à indiquer qu'il faut la remplacer par une expression qui sera convertie en
+booléen. Le <code>alors</code> est optionnel.</p>
+<pre><code>si &lt;condition&gt; [alors]
+    # code dans le bloc si
+[sinon si &lt;condition&gt; [alors]
+    # code dans le bloc sinon si
+]*
+[sinon
+    # code dans le bloc sinon
+]
+fin si
+</code></pre>
+<pre><code>var age = 20
+si age &gt;= 18 alors
+    afficher &quot;Tu es majeur.&quot;
+sinon si age &gt;= 13
+    afficher &quot;Tu es un adolescent.&quot;
+sinon si age &gt;= 3
+    afficher &quot;Tu es un enfant.&quot;
+sinon
+    afficher &quot;Tu es un bébé.&quot;
+fin si
+</code></pre>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

@@ -291,7 +291,7 @@ type <a href="../concepts_base/datatypes/type_particulier.html#le-type-iterable"
 variable puis du mot clef <code>dans</code> et d'une valeur de
 type <a href="../concepts_base/datatypes/type_particulier.html#le-type-iterable"><code>iterable</code></a>.</p>
 <p>L'<a href="../annexe/lexique.html#les-%C3%A9nonc%C3%A9s">énoncé</a> de fermeture est le mot clef <code>fin pour</code></p>
-<pre><code>pour [var] &lt;nom_var&gt; dans &lt;valeur iterable&gt;
+<pre><code>pour [var|const] &lt;nom_var&gt; dans &lt;valeur iterable&gt;
     # code à l'intérieur de la boucle
 fin pour
 </code></pre>
@@ -302,7 +302,7 @@ suites de nombres).</p>
 <p>Exemple où on compte le nombre d'espaces dans une phrase:</p>
 <pre><code>const maPhrase = &quot;Le gentil lapin saute dans les hautes herbes vertes&quot; 
 var nbEspaces = 0
-pour var lettre dans maPhrase 
+pour var lettre dans maPhrase
     si lettre == &quot; &quot; alors
         nbEspaces += 1
     fin si
