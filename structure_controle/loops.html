@@ -278,32 +278,37 @@ afficher &quot;Bravo, vous avez réussi!&quot;
 </code></pre>
 <h2 id="la-boucle-pour"><a class="header" href="#la-boucle-pour">La boucle <code>pour</code></a></h2>
 <h3 id="description-et-fonctionnement-3"><a class="header" href="#description-et-fonctionnement-3">Description et fonctionnement</a></h3>
-<p>La boucle <code>repeter</code> est la boucle la plus simple qu'il est possible de faire en AliveScript.</p>
-<p>Lors de l'énoncé d'ouverture, on précise le nombre de fois que la boucle sera effectuée. À chaque fin d'itération de la
-boucle, on remonte à l'énoncé d'ouverture jusqu'à ce que la boucle ait été exécutée un nombre de fois précisé dans
-l'énoncé d'ouverture.</p>
+<p>La boucle <code>pour</code> est une boucle utilisant des données de
+type <a href="../concepts_base/datatypes/type_particulier.html#le-type-iterable"><code>iterable</code></a> qui permet de passer sur chaque
+élément de ces données.</p>
+<p>Lors de l'énoncé d'ouverture, on précise deux choses:</p>
+<ul>
+<li>Une valeur <a href="../concepts_base/datatypes/type_particulier.html#le-type-iterable"><code>iterable</code></a> qui sera traversée.</li>
+<li>Une variable qui servira à enregistrer l'élément courant de l'iterable (qui changera de valeur à chaque l'itération).</li>
+</ul>
 <h3 id="syntaxe-3"><a class="header" href="#syntaxe-3">Syntaxe</a></h3>
-<p>L'<a href="../annexe/lexique.html#les-%C3%A9nonc%C3%A9s">énoncé</a> d'ouverture de cette boucle est le mot clef <code>repeter</code> suivi d'une
-valeur entière (voir <a href="../concepts_base/datatypes/types_primitifs.html#le-type-entier">type entier</a>) ou d'une variable
-contenant une valeur entière.</p>
-<p>L'<a href="../annexe/lexique.html#les-%C3%A9nonc%C3%A9s">énoncé</a> de fermeture est le mot clef <code>fin repeter</code></p>
-<pre><code>repeter &lt;valeur entière&gt;
+<p>L'<a href="../annexe/lexique.html#les-%C3%A9nonc%C3%A9s">énoncé</a> d'ouverture de cette boucle est le mot clef <code>pour</code> suivi d'une
+variable puis du mot clef <code>dans</code> et d'une valeur de
+type <a href="../concepts_base/datatypes/type_particulier.html#le-type-iterable"><code>iterable</code></a>.</p>
+<p>L'<a href="../annexe/lexique.html#les-%C3%A9nonc%C3%A9s">énoncé</a> de fermeture est le mot clef <code>fin pour</code></p>
+<pre><code>pour [var] &lt;nom_var&gt; dans &lt;valeur iterable&gt;
     # code à l'intérieur de la boucle
-fin repeter
+fin pour
 </code></pre>
 <h3 id="utilité-3"><a class="header" href="#utilité-3">Utilité</a></h3>
-<p>La boucle <code>repeter</code> est utile lorsque le <strong>nombre d'itérations de la boucle est connu</strong> et que le contenu de la boucle
-<strong>ne dépend pas de l'itération</strong>, c'est-à-dire qu'il n'y a pas de différences entre la première et la troisième
-itérations.</p>
-<p>Exemple où on fait la somme de 5 lancers de dés:</p>
-<pre><code>var sommeLancers = 0
-repeter 5
-    var lancer = aleatoire({1...6})  # nombre aléatoire entre 1 et 6
-    afficher &quot;Lancer: &quot; + lancer  # afficher le lancers
-    sommeLancers += lancer  # on l'ajoute à notre somme
-fin repeter
-            
-afficher &quot;La somme des lancers est &quot; + sommeLancers
+<p>La boucle <code>pour</code> est utile lorsque le <strong>nombre d'itérations de la boucle est connu</strong> et que la boucle sert à agir sur
+tous les éléments d'un <a href="../concepts_base/datatypes/type_particulier.html#le-type-iterable"><code>iterable</code></a> (incluant les
+suites de nombres).</p>
+<p>Exemple où on compte le nombre d'espaces dans une phrase:</p>
+<pre><code>const maPhrase = &quot;Le gentil lapin saute dans les hautes herbes vertes&quot; 
+var nbEspaces = 0
+pour var lettre dans maPhrase 
+    si lettre == &quot; &quot; alors
+        nbEspaces += 1
+    fin si
+fin pour
+
+afficher &quot;Il y a &quot; + nbEspaces + &quot; espaces dans ma phrase.&quot;
 </code></pre>
 
                     </main>
