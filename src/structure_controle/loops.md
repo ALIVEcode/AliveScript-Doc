@@ -208,6 +208,17 @@ La boucle `pour` est utile lorsque le **nombre d'itérations de la boucle est co
 tous les éléments d'un [`iterable`](../concepts_base/datatypes/type_particulier.md#le-type-iterable) (incluant les
 suites de nombres).
 
+Exemple où on "achète" les aliments sur notre liste d'épicerie:
+
+```
+const monEpicerie = ["pommes", "oranges", "melon d'eau", "pain"] 
+pour var aliment dans monEpicerie
+    afficher "J'achète: " + aliment
+fin pour
+
+afficher "J'ai fini mon épicerie!"
+```
+
 Exemple où on compte le nombre d'espaces dans une phrase:
 
 ```
