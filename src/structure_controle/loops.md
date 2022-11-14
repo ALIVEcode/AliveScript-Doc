@@ -159,16 +159,61 @@ tant que <condition>
 
 ### Utilité
 
-La boucle `faire tant que` est utile lorsque le **nombre d'itérations de la boucle n'est PAS connu** et que celui-ci
-dépend d'une condition ET que la boucle doit toujours s'exécuter au moins une fois.
+La boucle `faire tant que` est utile lorsque le **nombre d'itérations de la boucle n'est PAS connu**, que celui-ci
+dépend d'une condition ET que la boucle doit toujours **s'exécuter au moins une fois**.
 
 Exemple:
 
-À faire
+Demander à l'utilisateur de deviner un nombre au hasard en 1 et 10
 
 ```
-#...
+var nb = aleatoire({1...10})  # nombre entre 1 et 10
+faire
+    lire nombre dans var essaie
+tant que essaie != nb
+
+afficher "Bravo, vous avez réussi!"
 ```
 
 ## La boucle `pour`
 
+### Description et fonctionnement
+
+La boucle `repeter` est la boucle la plus simple qu'il est possible de faire en AliveScript.
+
+Lors de l'énoncé d'ouverture, on précise le nombre de fois que la boucle sera effectuée. À chaque fin d'itération de la
+boucle, on remonte à l'énoncé d'ouverture jusqu'à ce que la boucle ait été exécutée un nombre de fois précisé dans
+l'énoncé d'ouverture.
+
+### Syntaxe
+
+L'[énoncé](../annexe/lexique.md#les-énoncés) d'ouverture de cette boucle est le mot clef `repeter` suivi d'une
+valeur entière (voir [type entier](../concepts_base/datatypes/types_primitifs.md#le-type-entier)) ou d'une variable
+contenant une valeur entière.
+
+L'[énoncé](../annexe/lexique.md#les-énoncés) de fermeture est le mot clef `fin repeter`
+
+```
+repeter <valeur entière>
+    # code à l'intérieur de la boucle
+fin repeter
+```
+
+### Utilité
+
+La boucle `repeter` est utile lorsque le **nombre d'itérations de la boucle est connu** et que le contenu de la boucle
+**ne dépend pas de l'itération**, c'est-à-dire qu'il n'y a pas de différences entre la première et la troisième
+itérations.
+
+Exemple où on fait la somme de 5 lancers de dés:
+
+```
+var sommeLancers = 0
+repeter 5
+    var lancer = aleatoire({1...6})  # nombre aléatoire entre 1 et 6
+    afficher "Lancer: " + lancer  # afficher le lancers
+    sommeLancers += lancer  # on l'ajoute à notre somme
+fin repeter
+            
+afficher "La somme des lancers est " + sommeLancers
+```
