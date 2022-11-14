@@ -265,13 +265,46 @@ converti en un <a href="../concepts_base/datatypes/types_primitifs.html#le-type-
 tant que &lt;condition&gt;
 </code></pre>
 <h3 id="utilité-2"><a class="header" href="#utilité-2">Utilité</a></h3>
-<p>La boucle <code>faire tant que</code> est utile lorsque le <strong>nombre d'itérations de la boucle n'est PAS connu</strong> et que celui-ci
-dépend d'une condition ET que la boucle doit toujours s'exécuter au moins une fois.</p>
+<p>La boucle <code>faire tant que</code> est utile lorsque le <strong>nombre d'itérations de la boucle n'est PAS connu</strong>, que celui-ci
+dépend d'une condition ET que la boucle doit toujours <strong>s'exécuter au moins une fois</strong>.</p>
 <p>Exemple:</p>
-<p>À faire</p>
-<pre><code>#...
+<p>Demander à l'utilisateur de deviner un nombre au hasard en 1 et 10</p>
+<pre><code>var nb = aleatoire({1...10})  # nombre entre 1 et 10
+faire
+    lire nombre dans var essaie
+tant que essaie != nb
+
+afficher &quot;Bravo, vous avez réussi!&quot;
 </code></pre>
 <h2 id="la-boucle-pour"><a class="header" href="#la-boucle-pour">La boucle <code>pour</code></a></h2>
+<h3 id="description-et-fonctionnement-3"><a class="header" href="#description-et-fonctionnement-3">Description et fonctionnement</a></h3>
+<p>La boucle <code>repeter</code> est la boucle la plus simple qu'il est possible de faire en AliveScript.</p>
+<p>Lors de l'énoncé d'ouverture, on précise le nombre de fois que la boucle sera effectuée. À chaque fin d'itération de la
+boucle, on remonte à l'énoncé d'ouverture jusqu'à ce que la boucle ait été exécutée un nombre de fois précisé dans
+l'énoncé d'ouverture.</p>
+<h3 id="syntaxe-3"><a class="header" href="#syntaxe-3">Syntaxe</a></h3>
+<p>L'<a href="../annexe/lexique.html#les-%C3%A9nonc%C3%A9s">énoncé</a> d'ouverture de cette boucle est le mot clef <code>repeter</code> suivi d'une
+valeur entière (voir <a href="../concepts_base/datatypes/types_primitifs.html#le-type-entier">type entier</a>) ou d'une variable
+contenant une valeur entière.</p>
+<p>L'<a href="../annexe/lexique.html#les-%C3%A9nonc%C3%A9s">énoncé</a> de fermeture est le mot clef <code>fin repeter</code></p>
+<pre><code>repeter &lt;valeur entière&gt;
+    # code à l'intérieur de la boucle
+fin repeter
+</code></pre>
+<h3 id="utilité-3"><a class="header" href="#utilité-3">Utilité</a></h3>
+<p>La boucle <code>repeter</code> est utile lorsque le <strong>nombre d'itérations de la boucle est connu</strong> et que le contenu de la boucle
+<strong>ne dépend pas de l'itération</strong>, c'est-à-dire qu'il n'y a pas de différences entre la première et la troisième
+itérations.</p>
+<p>Exemple où on fait la somme de 5 lancers de dés:</p>
+<pre><code>var sommeLancers = 0
+repeter 5
+    var lancer = aleatoire({1...6})  # nombre aléatoire entre 1 et 6
+    afficher &quot;Lancer: &quot; + lancer  # afficher le lancers
+    sommeLancers += lancer  # on l'ajoute à notre somme
+fin repeter
+            
+afficher &quot;La somme des lancers est &quot; + sommeLancers
+</code></pre>
 
                     </main>
 
