@@ -19,5 +19,5 @@ afficher "Bonjour!"  # Ceci est la 3e ligne de code, la 2e ligne est vide.
 ## La terminologie
 
 Si vous ne comprenez pas un terme ou un concept, vous pouvez aller à
-l'[Annexe E: La terminologie](../annexe/terminologie.md) afin d'obtenir la définition du terme/concept. 
+l'[Annexe E: La terminologie](../annexe/lexique.md) afin d'obtenir la définition du terme/concept. 
 

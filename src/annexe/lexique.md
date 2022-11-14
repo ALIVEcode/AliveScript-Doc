@@ -24,7 +24,7 @@ lire tout au long de ce livre.
 Un énoncé (appelé _statement_ en anglais) est le nom donné à l'action principal réalisé par une _ligne de code_ (un
 énoncé peut s'étendre sur plusieurs
 lignes, mais cela est rarement le cas). Il ne peut y avoir qu'**un seul énoncé par ligne de code**, mais un énoncé peut
-inclure. Contrairement à une expression, un énoncé ne produit aucune valeur après avoir été exécuté.
+inclure plusieurs expressions. Contrairement à une expression, un énoncé ne produit aucune valeur après avoir été exécuté.
 
 Ex:
 

@@ -28,7 +28,7 @@ Une _sortie_ (ou _output_ en anglais) est une valeur qui répond aux critères s
 
 ## L'énoncé d'entrée `lire`
 
-L'[énoncé](../annexe/terminologie.md#les-énoncés) `lire` (peu importe la variation) affiche un message et demande à
+L'[énoncé](../annexe/lexique.md#les-énoncés) `lire` (peu importe la variation) affiche un message et demande à
 l'utilisateur d'entrer une valeur puis enregistre cette valeur dans une variable (pour en savoir plus sur les variables,
 voir [_chapitre 2.4_](./variables.md))
 

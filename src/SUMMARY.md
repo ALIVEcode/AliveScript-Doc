@@ -37,7 +37,7 @@
     - [Les getter et les setter](./concepts_avances/getter_setter.md)
 
 - [Annexe](annexe/annexe.md)
-    - [Annexe A: Lexique](annexe/terminologie.md)
+    - [Annexe A: Lexique](annexe/lexique.md)
     - [Annexe B: Mots clefs](annexe/mots_clefs.md)
     - [Annexe C: Tableau des types de données](annexe/tableau_datatypes.md)
     - [Annexe D: Listes des modules](annexe/liste_modules.md)
