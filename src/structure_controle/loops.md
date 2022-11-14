@@ -197,7 +197,7 @@ type [`iterable`](../concepts_base/datatypes/type_particulier.md#le-type-iterabl
 L'[énoncé](../annexe/lexique.md#les-énoncés) de fermeture est le mot clef `fin pour`
 
 ```
-pour [var] <nom_var> dans <valeur iterable>
+pour [var|const] <nom_var> dans <valeur iterable>
     # code à l'intérieur de la boucle
 fin pour
 ```
@@ -213,7 +213,7 @@ Exemple où on compte le nombre d'espaces dans une phrase:
 ```
 const maPhrase = "Le gentil lapin saute dans les hautes herbes vertes" 
 var nbEspaces = 0
-pour var lettre dans maPhrase 
+pour var lettre dans maPhrase
     si lettre == " " alors
         nbEspaces += 1
     fin si
