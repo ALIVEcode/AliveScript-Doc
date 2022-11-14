@@ -154,7 +154,8 @@ lesquelles une certaine boucle est à privilégier par rapport à une autre.</p>
 <ul>
 <li>Une <code>itération</code>. Chaque fois que le code contenu dans une boucle est exécuté, on appelle cela une <code>itération</code>.</li>
 <li>Le <code>corps de la boucle</code>. Le nom donné au code présent entre l'énoncé d'ouverture et l'énoncé de fermeture de la
-boucle.</li>
+boucle.<br />
+<strong>Le corps de la fonction est indenté à un niveau de plus afin de faciliter la lecture du code.</strong></li>
 </ul>
 </blockquote>
 <h2 id="pour-toutes-les-boucles-dalivescript"><a class="header" href="#pour-toutes-les-boucles-dalivescript">Pour toutes les boucles d'AliveScript:</a></h2>
@@ -174,8 +175,7 @@ permet au programme de savoir quand la boucle est terminée et qu'il faut sortir
 l'exécution du programme.</p>
 <blockquote>
 <p>Lorsque l'exécution arrive à l'énoncé de fermeture, on remonte à l'énoncé d'ouverture <em>si la condition de
-continuation
-est satisfaite</em>, sinon on sort de la boucle et on continue l'exécution du programme.</p>
+continuation est satisfaite</em>, sinon on sort de la boucle et on continue l'exécution du programme.</p>
 </blockquote>
 </li>
 </ul>
@@ -200,19 +200,77 @@ l'énoncé d'ouverture.</p>
 valeur entière (voir <a href="../concepts_base/datatypes/types_primitifs.html#le-type-entier">type entier</a>) ou d'une variable
 contenant une valeur entière.</p>
 <p>L'<a href="../annexe/lexique.html#les-%C3%A9nonc%C3%A9s">énoncé</a> de fermeture est le mot clef <code>fin repeter</code></p>
-<pre><code>repeter &lt;valeur numérique&gt;
+<pre><code>repeter &lt;valeur entière&gt;
     # code à l'intérieur de la boucle
 fin repeter
 </code></pre>
 <h3 id="utilité"><a class="header" href="#utilité">Utilité</a></h3>
 <p>La boucle <code>repeter</code> est utile lorsque le <strong>nombre d'itérations de la boucle est connu</strong> et que le contenu de la boucle
-<strong>ne dépend pas de l'itération</strong>, c'est-à-dire qu'il n'y a pas de différence entre la première et la troisième
+<strong>ne dépend pas de l'itération</strong>, c'est-à-dire qu'il n'y a pas de différences entre la première et la troisième
 itérations.</p>
-<p>Ex:</p>
-<pre><code>
+<p>Exemple où on fait la somme de 5 lancers de dés:</p>
+<pre><code>var sommeLancers = 0
+repeter 5
+    var lancer = aleatoire({1...6})  # nombre aléatoire entre 1 et 6
+    afficher &quot;Lancer: &quot; + lancer  # afficher le lancers
+    sommeLancers += lancer  # on l'ajoute à notre somme
+fin repeter
+            
+afficher &quot;La somme des lancers est &quot; + sommeLancers
 </code></pre>
 <h2 id="la-boucle-tant-que"><a class="header" href="#la-boucle-tant-que">La boucle <code>tant que</code></a></h2>
+<h3 id="description-et-fonctionnement-1"><a class="header" href="#description-et-fonctionnement-1">Description et fonctionnement</a></h3>
+<p>La boucle <code>tant que</code> est une boucle permettant de répéter un morceau de code jusqu'à ce qu'une certaine condition ne
+soit plus satisfaite (<em>la condition de continuation</em>).</p>
+<p>Lors de l'énoncé d'ouverture, on précise la condition de continuation. À chaque fin d'itération de la
+boucle, on remonte à l'énoncé d'ouverture jusqu'à ce que la condition de continuation ne soit plus respectée.</p>
+<h3 id="syntaxe-1"><a class="header" href="#syntaxe-1">Syntaxe</a></h3>
+<p>L'<a href="../annexe/lexique.html#les-%C3%A9nonc%C3%A9s">énoncé</a> d'ouverture de cette boucle est le mot clef <code>tant que</code> suivi par la
+condition de continuation sous la forme d'une <a href="../annexe/lexique.html#les-expressions">expression</a> dont le résultat sera
+converti en un <a href="../concepts_base/datatypes/types_primitifs.html#le-type-booleen">booléen</a>.</p>
+<p>L'<a href="../annexe/lexique.html#les-%C3%A9nonc%C3%A9s">énoncé</a> de fermeture est le mot clef <code>fin tant que</code></p>
+<pre><code>tant que &lt;condition&gt;
+    # code à l'intérieur de la boucle
+fin tant que
+</code></pre>
+<h3 id="utilité-1"><a class="header" href="#utilité-1">Utilité</a></h3>
+<p>La boucle <code>tant que</code> est utile lorsque le <strong>nombre d'itérations de la boucle n'est PAS connu</strong> et que celui-ci dépend
+d'une condition.</p>
+<p>Exemple:</p>
+<p>On veut trouver combien de nombres consécutifs il faut additionner pour que leur somme soit plus grande ou égale à 100.</p>
+<pre><code>var total = 0  # somme des nombres
+var i = 0  # nombre courant
+tant que total &lt;= 100
+    i += 1      # on augmente i de 1 pour passer au prochaine nombre 
+    total += i  # on augmente la somme de i
+fin tant que
+            
+afficher &quot;Il faut faire la somme des &quot; + i + &quot; premiers nombres pour dépasser 100&quot;
+</code></pre>
+<h3 id="fait-intéressant"><a class="header" href="#fait-intéressant">Fait intéressant</a></h3>
+<p>L'énoncé <code>tant que vrai</code> permet de faire une boucle qui s'exécute indéfiniment jusqu'à ce qu'on utilise le mot
+clef <code>sortir</code>.</p>
 <h2 id="la-boucle-faire-tant-que"><a class="header" href="#la-boucle-faire-tant-que">La boucle <code>faire tant que</code></a></h2>
+<h3 id="description-et-fonctionnement-2"><a class="header" href="#description-et-fonctionnement-2">Description et fonctionnement</a></h3>
+<p>La boucle <code>faire tant que</code> est très semblable à la boucle <a href="#la-boucle-tant-que"><code>tant que</code></a>. Les seules différences
+étant la syntaxe et le fait que la boucle <code>faire tant que</code> est toujours exécutée au moins une fois, contrairement à la
+boucle <code>tant que</code> qui peut ne pas être exécutée si la condition de continuation est fausse dès le départ.</p>
+<h3 id="syntaxe-2"><a class="header" href="#syntaxe-2">Syntaxe</a></h3>
+<p>L'<a href="../annexe/lexique.html#les-%C3%A9nonc%C3%A9s">énoncé</a> d'ouverture est le mot clef <code>faire</code></p>
+<p>L'<a href="../annexe/lexique.html#les-%C3%A9nonc%C3%A9s">énoncé</a> de fermeture de cette boucle est le mot clef <code>tant que</code> suivi par la
+condition de continuation sous la forme d'une <a href="../annexe/lexique.html#les-expressions">expression</a> dont le résultat sera
+converti en un <a href="../concepts_base/datatypes/types_primitifs.html#le-type-booleen">booléen</a>.</p>
+<pre><code>faire
+    # code à l'intérieur de la boucle
+tant que &lt;condition&gt;
+</code></pre>
+<h3 id="utilité-2"><a class="header" href="#utilité-2">Utilité</a></h3>
+<p>La boucle <code>faire tant que</code> est utile lorsque le <strong>nombre d'itérations de la boucle n'est PAS connu</strong> et que celui-ci
+dépend d'une condition ET que la boucle doit toujours s'exécuter au moins une fois.</p>
+<p>Exemple:</p>
+<p>À faire</p>
+<pre><code>#...
+</code></pre>
 <h2 id="la-boucle-pour"><a class="header" href="#la-boucle-pour">La boucle <code>pour</code></a></h2>
 
                     </main>
