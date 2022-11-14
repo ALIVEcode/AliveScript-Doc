@@ -299,6 +299,14 @@ fin pour
 <p>La boucle <code>pour</code> est utile lorsque le <strong>nombre d'itérations de la boucle est connu</strong> et que la boucle sert à agir sur
 tous les éléments d'un <a href="../concepts_base/datatypes/type_particulier.html#le-type-iterable"><code>iterable</code></a> (incluant les
 suites de nombres).</p>
+<p>Exemple où on &quot;achète&quot; les aliments sur notre liste d'épicerie:</p>
+<pre><code>const monEpicerie = [&quot;pommes&quot;, &quot;oranges&quot;, &quot;melon d'eau&quot;, &quot;pain&quot;] 
+pour var aliment dans monEpicerie
+    afficher &quot;J'achète: &quot; + aliment
+fin pour
+
+afficher &quot;J'ai fini mon épicerie!&quot;
+</code></pre>
 <p>Exemple où on compte le nombre d'espaces dans une phrase:</p>
 <pre><code>const maPhrase = &quot;Le gentil lapin saute dans les hautes herbes vertes&quot; 
 var nbEspaces = 0
